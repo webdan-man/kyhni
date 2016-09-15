@@ -5,7 +5,6 @@ var navigationPanel = $('.navigation');
 var scrollDuration = 600;
 var form = $('form');
 
-
 $('input[name="name"]').on('keypress', function() {
     var that = this;
 
@@ -155,3 +154,19 @@ if (isMobile != true) {
         }
     });
 }
+var description = $('.description-block');
+$('[data-description]').on('mouseover', function () {
+    var self = $(this);
+    var data = self.data('description');
+    description.data('text', data).attr('data-text', data);
+    var oy = self.height() + self.position().top;
+    description.addClass('active').clone();
+    self.parent().append(description);
+    $('.description-block').css({
+        top: oy + 'px'
+    });
+});
+
+$('[data-description]').on('mouseout', function () {
+    $('.description-block').removeClass('active');
+});

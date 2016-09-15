@@ -102,5 +102,135 @@
 
   .title{
     color: #524b4c;
+    margin-bottom: 20px;
+  }
+
+  .step{
+    &__item{
+      width: 320px;
+
+      &-head{
+        min-height: 120px;
+      }
+    }
+
+    &__heading{
+      color: #524b4c;
+      font-family: Georgia;
+      font-size: 18px;
+      font-style: italic;
+      margin-bottom: 12px;
+    }
+
+    &__subheading{
+      color: #9d9798;
+      font-family: Georgia;
+      font-size: 12px;
+      font-style: italic;
+    }
+
+    .step-id{
+      width: 22px;
+
+      span{
+        color: #aaa5a6;
+        font-family: RobotoCondensed;
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 28px;
+        text-transform: uppercase;
+        display: block;
+        text-align: center;
+
+        &.active-step{
+          color: #648692;
+          font-size: 24px;
+
+          &:after{
+            content: '';
+            display: block;
+            margin: 0 auto 0 auto;
+            width: 15px;
+            height: 1px;
+            background-color: #ada7a8;
+          }
+        }
+      }
+    }
+
+    &__title{
+      color: #524b4c;
+      font-family: RobotoCondensed;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 22px;
+    }
+
+    .variants{
+      @extend .flex_start-sm_top;
+      position: relative;
+      z-index: 1;
+      margin-left: -16px;
+
+      &__item{
+        cursor: pointer;
+        width: 80px;
+
+        &.active,
+        &:hover{
+          .variants__preview{
+            border-color: #524b4c;
+          }
+        }
+      }
+
+      &__preview{
+        display: block;
+        margin: 0 auto 10px auto;
+        width: 66px;
+        height: 66px;
+        border-radius: 50%;
+        border: 1px solid #d5d2d1;
+        overflow: hidden;
+        padding: 5px;
+        font-size: 0;
+        @include transition();
+
+        &-pic{
+          width: 100%;
+          height: 100%;
+          display: block;
+          margin: 0 auto;
+          border-radius: 50%;
+        }
+      }
+
+      &__name{
+        color: #654e52;
+        font-size: 11px;
+        font-weight: 400;
+        text-align: center;
+      }
+
+      &_small{
+        @include flex-wrap(wrap);
+
+        .variants__preview{
+          width: 48px;
+          height: 48px;
+        }
+      }
+    }
+
+    .result{
+      display: block;
+      margin: 50px auto 0 auto;
+      max-width: 100%;
+    }
+
+    &_1{
+
+    }
   }
 }

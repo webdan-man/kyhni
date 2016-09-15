@@ -824,7 +824,7 @@
     -ms-align-items: center;
     -webkit-box-align: center;
     align-items: center; }
-    .flex_start-sm_top {
+    .flex_start-sm_top, .s2 .step .variants {
       display: -webkit-box;
       display: -ms-box;
       display: box;
@@ -1420,6 +1420,63 @@ body.white-block .menu-btn {
     body.white-block .menu-btn:hover span {
       background-color: #ffffff; }
 
+[data-description] {
+  position: relative;
+  z-index: 1; }
+  [data-description]:after {
+    opacity: 0;
+    z-index: -10;
+    pointer-events: none;
+    cursor: default; }
+  [data-description]:after {
+    content: '';
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    width: 0;
+    height: 0;
+    border: 5px solid #493f40;
+    border-top-color: transparent;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    border-bottom-width: 10px; }
+  [data-description]:hover {
+    z-index: 10 !important; }
+    [data-description]:hover:after {
+      display: block;
+      opacity: 1;
+      z-index: 1;
+      pointer-events: auto; }
+
+.description-block {
+  transition: 0.25s opacity;
+  -webkit-transition: 0.25s opacity;
+  position: absolute;
+  z-index: -10;
+  width: 100%;
+  max-width: 320px;
+  padding: 20px;
+  color: white;
+  font-family: Roboto;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  text-align: left;
+  background-color: #493f40;
+  -webkit-border-radius: 15px;
+  border-radius: 15px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  opacity: 0;
+  pointer-events: none; }
+  .description-block:before {
+    content: attr(data-text); }
+  .description-block.active {
+    display: block;
+    opacity: 1;
+    z-index: 30;
+    pointer-events: auto; }
+
 .menu {
   background-color: #518794;
   position: fixed;
@@ -1643,11 +1700,103 @@ body.menu-active .menu {
 .s2 {
   background-color: #eae7e2; }
   .s2 .title {
-    color: #524b4c; }
+    color: #524b4c;
+    margin-bottom: 20px; }
+  .s2 .step__item {
+    width: 320px; }
+    .s2 .step__item-head {
+      min-height: 120px; }
+  .s2 .step__heading {
+    color: #524b4c;
+    font-family: Georgia;
+    font-size: 18px;
+    font-style: italic;
+    margin-bottom: 12px; }
+  .s2 .step__subheading {
+    color: #9d9798;
+    font-family: Georgia;
+    font-size: 12px;
+    font-style: italic; }
+  .s2 .step .step-id {
+    width: 22px; }
+    .s2 .step .step-id span {
+      color: #aaa5a6;
+      font-family: RobotoCondensed;
+      font-size: 12px;
+      font-weight: 700;
+      line-height: 28px;
+      text-transform: uppercase;
+      display: block;
+      text-align: center; }
+      .s2 .step .step-id span.active-step {
+        color: #648692;
+        font-size: 24px; }
+        .s2 .step .step-id span.active-step:after {
+          content: '';
+          display: block;
+          margin: 0 auto 0 auto;
+          width: 15px;
+          height: 1px;
+          background-color: #ada7a8; }
+  .s2 .step__title {
+    color: #524b4c;
+    font-family: RobotoCondensed;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 22px; }
+  .s2 .step .variants {
+    position: relative;
+    z-index: 1;
+    margin-left: -16px; }
+    .s2 .step .variants__item {
+      cursor: pointer;
+      width: 80px; }
+      .s2 .step .variants__item.active .variants__preview, .s2 .step .variants__item:hover .variants__preview {
+        border-color: #524b4c; }
+    .s2 .step .variants__preview {
+      display: block;
+      margin: 0 auto 10px auto;
+      width: 66px;
+      height: 66px;
+      -webkit-border-radius: 50%;
+      border-radius: 50%;
+      border: 1px solid #d5d2d1;
+      overflow: hidden;
+      padding: 5px;
+      font-size: 0;
+      transition: 0.25s all;
+      -webkit-transition: 0.25s all; }
+      .s2 .step .variants__preview-pic {
+        width: 100%;
+        height: 100%;
+        display: block;
+        margin: 0 auto;
+        -webkit-border-radius: 50%;
+        border-radius: 50%; }
+    .s2 .step .variants__name {
+      color: #654e52;
+      font-size: 11px;
+      font-weight: 400;
+      text-align: center; }
+    .s2 .step .variants_small {
+      -ms-box-lines: multiple;
+      box-lines: multiple;
+      -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+      .s2 .step .variants_small .variants__preview {
+        width: 48px;
+        height: 48px; }
+  .s2 .step .result {
+    display: block;
+    margin: 50px auto 0 auto;
+    max-width: 100%; }
 
 body {
   padding: 0;
-  margin: 0; }
+  margin: 0;
+  font-family: Roboto; }
 
 .wrapper {
   max-width: 1170px;
