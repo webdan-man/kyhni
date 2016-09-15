@@ -1,0 +1,112 @@
+.btn{
+  background-color: $blue;
+  border-radius: 40px;
+  font-family: RobotoCondensed;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: white;
+  @include transition();
+
+  &:hover{
+    background-color: white;
+    color: $blue;
+  }
+
+  &_first-screen{
+    width: 237px;
+    height: 85px;
+    font-size: 21px;
+  }
+
+  &_scroll{
+    width: 54px;
+    height: 54px;
+    display: block;
+    position: relative;
+    z-index: 1;
+
+    &__pic{
+      @include centered();
+      @include transition();
+
+      &_hover{
+        opacity: 0;
+      }
+    }
+
+    &:hover{
+      .btn_scroll__pic{
+        opacity: 0;
+
+        &_hover{
+          opacity:  1;
+        }
+      }
+    }
+  }
+}
+
+.menu-btn{
+  padding: 0;
+  margin-left: 30px;
+  width: 54px;
+  height: 54px;
+  background-color: $grey;
+  border-radius: 50%;
+  @include transition();
+
+  span{
+    width: 21px;
+    height: 2px;
+    display: block;
+    margin: 5px auto;
+    background-color: white;
+    @include transition();
+  }
+
+  &.active,
+  &:hover{
+    background-color: $white;
+
+    span{
+      background-color: #484142;
+    }
+  }
+}
+
+
+
+body{
+  &.white-block{
+    .header__logo-pic_white{
+      opacity: 0;
+    }
+
+    .header__phone{
+      color:  #484142;
+    }
+
+    .header__phone_whatsapp{
+      &:before{
+        background-color: $white;
+        background-image: url("../img/header/icon.png");
+      }
+    }
+
+    .menu-btn{
+      background-color: $white;
+
+      span{
+        background-color: $blue;
+      }
+
+      &:hover{
+        background-color: #484142;
+
+        span{
+          background-color: $white;
+        }
+      }
+    }
+  }
+}

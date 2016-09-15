@@ -1,0 +1,106 @@
+.header{
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  padding-top: 20px;
+
+  &__logo{
+    width: 91px;
+    height: 91px;
+    position: relative;
+    z-index: 1;
+
+    &-pic{
+      width: 100%;
+
+      &_white{
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+      }
+    }
+  }
+
+  &__text{
+    font-family: RobotoCondensed;
+    color:  #ffffff;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: left;
+    text-transform: uppercase;
+    margin-left: 15px;
+  }
+
+  &__phone{
+    font-family: RobotoCondensed;
+    color:  #eae7e2;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: left;
+    margin-left: 28px;
+    white-space: nowrap;
+
+    &_whatsapp{
+      &:before{
+        content: '';
+        width: 28px;
+        height: 28px;
+        @extend .col-m;
+        border-radius: 50%;
+        background-color: $grey;
+        margin-right: 18px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-image: url("../img/header/icon-white.png");
+      }
+    }
+  }
+}
+
+.s1{
+  background-image: url("../img/section1/bg.png");
+  font-family: Georgia;
+  color:  #ffffff;
+  text-align: center;
+
+  .heading{
+    font-size: 30px;
+    font-weight: 400;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 35px;
+  }
+
+  .subheading{
+    font-size: 24px;
+    font-style: italic;
+    letter-spacing: 0.6px;
+  }
+
+  .btn{
+    display: block;
+    margin: 50px auto 0 auto;
+
+    &_scroll{
+      margin: 28px auto;
+    }
+  }
+
+  .copyright{
+    font-family: OpenSans;
+    color:  #eae7e2;
+    font-size: 10px;
+    font-weight: 400;
+    text-align: right;
+  }
+}
+
+.s2{
+  background-color: #eae7e2;
+
+  .title{
+    color: #524b4c;
+  }
+}

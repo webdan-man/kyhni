@@ -1,0 +1,95 @@
+.menu{
+  background-color: #518794;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  opacity: 0;
+  z-index: -1;
+  @include transition(0.25s, opacity);
+
+  &__list{
+    width: 100%;
+    max-width: 720px;
+    max-height: 600px;
+    height: 100%;
+    @include centered();
+
+    &-item{
+      height: calc(100% / 8);
+
+      a{
+        color: $white;
+        font-family: RobotoCondensed;
+        font-size: 18px;
+        font-weight: 700;
+        text-transform: uppercase;
+        display: block;
+        max-width: 460px;
+        margin: 0 auto;
+        border: 2px solid transparent;
+        text-align: center;
+        border-radius: 40px;
+        padding: 16px 0;
+        @include transition();
+
+        &:hover{
+          border-color: $white;
+        }
+
+        @media (max-height: 450px){
+          font-size: 14px;
+          padding: 10px 0;
+        }
+
+        @media (max-width: 480px){
+          font-size: 14px;
+          padding: 10px 0;
+        }
+      }
+    }
+  }
+
+  .close{
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    position: relative;
+    z-index: 1;
+    padding: 0;
+    display: block;
+    background-color: $white;
+    border: 2px solid transparent;
+    @include transition();
+
+    &-pic{
+      @include centered();
+      @include transition();
+
+      &_hover{
+        opacity: 0;
+      }
+    }
+
+    &:hover{
+      background-color: transparent;
+      border-color: $white;
+
+      .close-pic{
+        opacity: 0;
+
+        &_hover{
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+body{
+  &.menu-active{
+    .menu{
+      z-index: 1000;
+      opacity: 1;
+    }
+  }
+}

@@ -1,0 +1,147 @@
+body{
+  padding: 0;
+  margin: 0;
+}
+.wrapper{
+  max-width: $width-lg;
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  margin: 0 auto;
+
+  @media (max-width: $width-lg){
+    padding: 0 10px;
+    height: auto;
+  }
+}
+.wrapper-all{
+ width: 100%;
+  overflow: hidden;
+  min-width: $width-min;
+}
+*{
+  box-sizing: border-box;
+}
+h1, h2, h3, h4, p, a, img, ul, li{
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style-type: none;
+  color: inherit;
+}
+header, section, footer{
+  width: 100%;
+  min-width: $width-min;
+  margin: 0 auto;
+  box-sizing: border-box;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+section{
+  min-height: 600px;
+  height: 100vh;
+
+  @media (max-width: $width-lg){
+    height: auto;
+    min-height: 0;
+    padding: 40px 0;
+  }
+}
+.container{
+  width: 100%;
+  position: absolute;
+  height: 600px;
+  top: 50%;
+  margin-top: -300px;
+  padding-top: 115px;
+
+  @media (max-width: $width-lg){
+    height: auto;
+    position: static;
+    margin: 0 auto;
+  }
+}
+button,
+input{
+  position: relative;
+  box-sizing: border-box;
+  border: none;
+  background-color: transparent;
+  outline: none;
+  border-radius: 0;
+}
+
+button{
+  cursor: pointer;
+}
+
+.col{
+  display: inline-block;
+  vertical-align: top;
+}
+
+.col-m{
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.input{
+  &_error{
+
+  }
+}
+
+.title{
+  font-family: Georgia;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 30px;
+  text-transform: uppercase;
+  text-align: center;
+
+  @media(max-width: $width-sm){
+    font-size: 18px;
+    line-height: 26px;
+  }
+}
+
+.subtitle{
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 22px;
+  text-align: center;
+
+  @media(max-width: $width-sm){
+    font-size: 18px;
+    line-height: 20px;
+  }
+}
+
+.hidden{
+  display: none!important;
+}
+
+.hidden-md{
+  @media(max-width: $width-lg){
+    display: none!important;
+  }
+}
+
+.show-md{
+  @media(min-width: $width-lg){
+    display: none!important;
+  }
+}
+
+.hidden-sm{
+  @media(max-width: $width-sm){
+    display: none!important;
+  }
+}
+
+.show-sm{
+  @media(min-width: $width-sm){
+    display: none!important;
+  }
+}
