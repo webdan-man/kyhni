@@ -1,6 +1,7 @@
 # Windows image file caches
 Thumbs.db
 ehthumbs.db
+
 bower-components/
 node_modules/
 .idea/
