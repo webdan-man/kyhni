@@ -22,6 +22,21 @@
       font-weight: 700;
       text-transform: uppercase;
       background-color: white;
+      box-shadow: 0px 0px 10px 0px transparent;
+      @include transition();
+      &::-webkit-input-placeholder {@include transition();}
+      &::-moz-placeholder          {@include transition();}
+      &:-moz-placeholder           {@include transition();}
+      &:-ms-input-placeholder      {@include transition();}
+
+      &_error{
+        box-shadow: 0px 0px 10px 0px #ff0f00;
+
+        &::-webkit-input-placeholder {color:#ff0f00;}
+        &::-moz-placeholder          {color:#ff0f00;}
+        &:-moz-placeholder           {color:#ff0f00;}
+        &:-ms-input-placeholder      {color:#ff0f00;}
+      }
     }
 
     .btn{

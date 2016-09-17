@@ -84,10 +84,15 @@ navList.on('click', function(e){
 });
 
 
+$('.btn_scroll').on('click', function () {
+    $('body, html').animate({
+        scrollTop: $('.s2').offset().top
+    },scrollDuration);
+});
+
 //// Слайдер
 $('.s4__slider').slick({
     slidesToShow: 1,
-    arrows: false,
     responsive: [
         {
             breakpoint: 680,
@@ -196,4 +201,15 @@ $('[data-select-all]').on('click', function () {
 });
 $('input[type="checkbox"]:not(.checkbox-all)').click(function () {
     $('.checkbox-all').prop('checked', false);
+});
+
+
+$('[data-step]').on('click', function () {
+    var data = $(this).data('step');
+
+    $('.s2').removeClass('step_1-bg step_2-bg step_3-bg step_4-bg');
+    $('.s2').addClass('step_'+ data +'-bg');
+
+    $('.s2 .step').addClass('hidden');
+    $('.s2 .step_' + data).removeClass('hidden');
 });
