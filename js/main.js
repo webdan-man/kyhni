@@ -85,10 +85,9 @@ navList.on('click', function(e){
 
 
 //// Слайдер
-$('.slider').slick({
-    slidesToShow: 3,
+$('.s4__slider').slick({
+    slidesToShow: 1,
     arrows: false,
-    centerMode: true,
     responsive: [
         {
             breakpoint: 680,
@@ -169,4 +168,32 @@ $('[data-description]').on('mouseover', function () {
 
 $('[data-description]').on('mouseout', function () {
     $('.description-block').removeClass('active');
+});
+
+$('[data-slide]').on('click', function () {
+    var data = $(this).data('slide');
+    $('.s4__slider').slick('slickGoTo', data);
+});
+
+$('[data-tab-ctrl]').on('click', function () {
+    var data = $(this).data('tab-ctrl');
+    
+    $('[data-tab]').addClass('hide');
+    $('[data-tab="'+ data +'"]').removeClass('hide');
+});
+
+$('[data-select-all]').on('click', function () {
+    var self = $(this);
+    var checkbox = self.find('.checkbox-all');
+    var parent = self.parent();
+
+    if(!checkbox.is(':checked')){
+        parent.find('input[type="checkbox"]').prop('checked', false);
+    }
+    else{
+        parent.find('input[type="checkbox"]:not(.checkbox-all)').prop('checked', true);
+    }
+});
+$('input[type="checkbox"]:not(.checkbox-all)').click(function () {
+    $('.checkbox-all').prop('checked', false);
 });

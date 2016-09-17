@@ -178,3 +178,20 @@ body{
     pointer-events: auto;
   }
 }
+
+.white-description{
+  .description-block{
+    background-color: #eae7e2;
+    color: #484142;
+  }
+
+  [data-description]{
+    &:after{
+      border: 5px solid #eae7e2;
+      border-top-color: transparent;
+      border-left-color: transparent;
+      border-right-color: transparent;
+      border-bottom-width: 10px;
+    }
+  }
+}
