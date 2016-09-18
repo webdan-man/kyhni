@@ -12,6 +12,9 @@ body{
 
   @media (max-width: $width-lg){
     padding: 0 10px;
+  }
+
+  @media (max-width: $width-md){
     height: auto;
   }
 }
@@ -44,10 +47,10 @@ section{
   min-height: 600px;
   height: 100vh;
 
-  @media (max-width: $width-lg){
+  @media (max-width: $width-md){
     height: auto;
     min-height: 0;
-    padding: 40px 0;
+    padding: 60px 0;
   }
 }
 .container{
@@ -57,14 +60,15 @@ section{
   top: 50%;
   margin-top: -300px;
 
-  @media (max-width: $width-lg){
+  @media (max-height: 800px){
+    padding-top: 100px;
+  }
+
+  @media (max-width: $width-md){
     height: auto;
     position: static;
     margin: 0 auto;
-  }
-
-  @media (max-height: 800px){
-    padding-top: 100px;
+    padding-top: 0;
   }
 
   &:after{
@@ -75,6 +79,12 @@ section{
     font-weight: 400;
     text-align: right;
     display: block;
+  }
+
+  @media (max-width: $width-sm){
+    &:after{
+      display: none;
+    }
   }
 }
 
@@ -163,6 +173,12 @@ button{
 
 .show-sm{
   @media(min-width: $width-sm){
+    display: none!important;
+  }
+}
+
+.show-xs{
+  @media(min-width: $width-xs){
     display: none!important;
   }
 }

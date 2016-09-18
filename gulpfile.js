@@ -12,6 +12,7 @@ var ftp = require('gulp-ftp');
 var htmlmin = require('gulp-htmlmin');
 var imagemin = require('gulp-imagemin');
 var pngquant = require('imagemin-pngquant');
+var imageminOptipng = require('imagemin-optipng');
 
 //имена папок Разработки
 var style = 'css';
@@ -38,12 +39,6 @@ gulp.task('sass', function() {
 
 gulp.task('img', function () {
     return gulp.src(image + '/**/*')
-        .pipe(imagemin({
-            interlaced: true,
-            progressive: true,
-            svgoPlugins: [{removeViewBox: false}],
-            une: [pngquant()]
-        }))
         .pipe(gulp.dest('dist/' + build_image));
 });
 

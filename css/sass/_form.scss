@@ -48,5 +48,25 @@
         color: white;
       }
     }
+
+    @media (max-width: $width-sm){
+      max-width: 380px;
+      display: block;
+      margin: 35px auto 0 auto;
+
+      .btn,
+      .input{
+        display: block;
+        margin: 0 auto 23px auto;
+        width: 100%;
+        max-width: 331px;
+        height: 52px;
+        font-size: 16px;
+
+        &.btn{
+          margin-bottom: 0;
+        }
+      }
+    }
   }
 }

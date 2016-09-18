@@ -42,18 +42,35 @@
     margin-left: 28px;
     white-space: nowrap;
 
+    @media (max-width: $width-sm){
+      display: block;
+      margin-right: 120px;
+      margin-left: 0;
+    }
+
+    @media (max-width: $width-xs){
+      margin-right: 70px;
+    }
+
     &_whatsapp{
       &:before{
         content: '';
         width: 28px;
         height: 28px;
-        @extend .col-m;
+        display: inline-block;
+        vertical-align: middle;
         border-radius: 50%;
         background-color: $grey;
         margin-right: 18px;
         background-repeat: no-repeat;
         background-position: center;
         background-image: url("../img/header/icon-white.png");
+      }
+
+      @media (max-width: $width-sm){
+        &:before{
+          display: none;
+        }
       }
     }
   }
@@ -95,18 +112,29 @@
     font-weight: 400;
     text-align: right;
   }
+
+  @media (max-width: $width-md){
+    padding-top: 150px;
+  }
+
+  @media (max-width: $width-xs){
+    padding-top: 230px;
+  }
 }
 
 .s2{
   background-color: #eae7e2;
-  background-image: url("../img/section2/bg1.png");
 
-  &.step_2-bg{
-    background-image: url("../img/section2/bg2.png");
-  }
+  @media (min-width: $width-sm){
+    background-image: url("../img/section2/bg1.png");
 
-  &.step_3-bg{
-    background-image: url("../img/section2/bg3.png");
+    &.step_2-bg{
+      background-image: url("../img/section2/bg2.png");
+    }
+
+    &.step_3-bg{
+      background-image: url("../img/section2/bg3.png");
+    }
   }
 
   &.step_4-bg{
@@ -121,9 +149,26 @@
   .step{
     &__item{
       width: 320px;
+      position: relative;
+      z-index: 1;
+
+      @media (max-width: $width-sm){
+        margin: 0 auto 40px auto;
+        display: block;
+        width: 100%;
+        max-width: 380px;
+      }
 
       &-head{
         min-height: 120px;
+
+        @media (max-width: $width-sm){
+          padding-left: 50px;
+        }
+      }
+
+      &:hover{
+        z-index: 10;
       }
     }
 
@@ -144,6 +189,12 @@
 
     .step-id{
       width: 22px;
+
+      @media (max-width: $width-sm){
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
 
       span{
         color: #aaa5a6;
@@ -181,10 +232,14 @@
     }
 
     .variants{
-      @extend .flex_start-sm_top;
+      @extend .flex_start-min_top;
       position: relative;
       z-index: 1;
       margin-left: -16px;
+
+      @media (max-width: $width-sm){
+        margin: 0 auto;
+      }
 
       &__item{
         cursor: pointer;
@@ -347,6 +402,9 @@
       .step__item{
         width: 280px;
       }
+      .step__heading{
+        margin-bottom: 0;
+      }
     }
 
     &_4{
@@ -409,6 +467,13 @@
         margin-bottom: 10px;
         margin-right: 14px;
 
+        @media (max-width: $width-sm){
+          font-size: 14px;
+        }
+        @media (max-width: $width-xs){
+          width: 100%;
+        }
+
         &.all{
           width: 100%;
           font-size: 14px;
@@ -463,6 +528,7 @@
       border-radius: 10px;
       padding: 20px;
       text-align: center;
+      margin: 0 auto;
 
       .text{
         color: #484142;
@@ -534,14 +600,22 @@
   }
 
   .slider-wrap{
-    @include flex-box();
-    @include justify-content(center);
+    @media (min-width: $width-md){
+      @include flex-box();
+      @include justify-content(center);
+    }
   }
 
   &__slider{
     width: 600px;
     position: relative;
     z-index: 1;
+
+    @media (max-width: $width-md){
+      margin: 0 auto 0 auto;
+      width: 100%;
+      max-width: 800px;
+    }
 
     &>*{
       outline: none;
@@ -566,6 +640,17 @@
       width: 284px;
       margin-top: 24px;
 
+      @media (max-width: $width-md){
+        margin: 0 auto 0 auto;
+        width: 100%;
+        max-width: 800px;
+        padding-left: 25px;
+      }
+
+      @media (max-width: 600px){
+        padding-left: 0;
+      }
+
       .item{
         width: 142px;
         height: 132px;
@@ -573,6 +658,15 @@
         position: relative;
         z-index: 1;
         cursor: pointer;
+
+        @media (max-width: $width-md){
+          width: 25%;
+          height: auto;
+        }
+
+        @media (max-width: $width-xs){
+          width: 50%;
+        }
 
         &:after{
           content: '';
@@ -606,6 +700,10 @@
       z-index: 1;
       padding: 25px 0 0 25px;
       width: 100%;
+
+      @media (max-width: 600px){
+        padding: 25px 0 0 0;
+      }
     }
 
     &__description{
@@ -656,6 +754,10 @@
 
     .pic{
       width: 100%;
+
+      @media (max-width: 600px){
+        min-height: 330px;
+      }
     }
   }
 
@@ -707,6 +809,11 @@
 .s5{
   background-image: url("../img/section5/bg.png");
 
+  @media (max-width: $width-md){
+    background-image: none;
+    background-color: #f3f3f3;
+  }
+
   .title{
     margin-bottom: 32px;
     color: #484142;
@@ -717,6 +824,10 @@
     width: 100%;
     position: relative;
     z-index: 1;
+
+    @media (max-width: $width-md){
+      margin: 0 auto;
+    }
 
     &__ctrl{
       width: 220px;
@@ -820,6 +931,101 @@
           left: 0;
         }
       }
+
+      @media (max-width: $width-sm){
+        width: 140px;
+        height: 58px;
+        padding: 0 5px;
+
+        &:after {
+          width: 24px;
+          height: 12px;
+          top: 0;
+          left: calc(50% - 12px);
+        }
+
+        &:before{
+          width: 128px;
+          height: 46px;
+          top: 5px;
+          left: 5px;
+        }
+
+        &__indicator{
+          width: 15px;
+          height: 15px;
+          margin: -8px auto 13px auto;
+
+          &:before{
+            width: 8px;
+            height: 8px;
+          }
+        }
+
+        &__name{
+          font-size: 10px;
+        }
+
+        &__number{
+          font-size: 26px;
+          line-height: 28px;
+          bottom: -11px;
+          left: calc(50% - 20px);
+          width: 40px;
+
+          &:before{
+            height: calc(100% - 12px);
+          }
+        }
+
+        &.active,
+        &:hover{
+          .tabs__ctrl__indicator{
+            &:before{
+              width: 11px;
+              height: 11px;
+            }
+          }
+        }
+      }
+
+      @media (max-width: 480px){
+        width: 100px;
+        height: 46px;
+
+        &:before{
+          width: 88px;
+          height: 34px;
+          top: 5px;
+          left: 5px;
+        }
+
+        &__name{
+          font-size: 7px;
+        }
+
+        &__number{
+          font-size: 26px;
+          line-height: 28px;
+          bottom: -11px;
+          left: calc(50% - 20px);
+          width: 40px;
+
+          &:before{
+            height: calc(100% - 12px);
+          }
+        }
+
+        &.active,
+        &:hover{
+          .tabs__ctrl__indicator{
+            &:before{
+              width: 11px;
+              height: 11px;
+            }
+          }
+        }
+      }
     }
 
     &__body{
@@ -834,10 +1040,30 @@
         text-transform: uppercase;
         text-align: center;
         margin-bottom: 45px;
+
+        @media (max-width: $width-xs){
+          br{
+            display: none;
+          }
+        }
+      }
+
+      .line{
+        display: block;
+        margin: 0 auto;
+
+        @media (max-width: $width-xs){
+          margin: 40px auto;
+          max-width: 100%;
+        }
       }
 
       &__list{
         width: 280px;
+
+        @media (max-width: $width-sm){
+          width: 100%;
+        }
 
         li{
           color: #484142;
@@ -890,6 +1116,15 @@
     font-size: 18px;
     font-style: italic;
     margin-bottom: 22px;
+
+    @media (max-width: $width-sm){
+      margin: 0 auto 40px auto;
+      max-width: 360px;
+
+      br{
+        display: none;
+      }
+    }
   }
 
   .form{
@@ -898,6 +1133,10 @@
 
     .item{
       width: 280px;
+
+      @media (max-width: $width-sm){
+        margin: 0 auto 40px auto;
+      }
     }
 
     .head{
@@ -982,6 +1221,16 @@
 .s7{
   background-color: #ece8e3;
 
+  .copyright{
+    color: #484142;
+    font-family: OpenSans;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    margin-top: 35px;
+    text-align: center;
+  }
+
   .title{
     color: #484142;
     margin-bottom: 40px;
@@ -995,6 +1244,10 @@
     height: 254px;
     display: block;
     margin: 0 auto 0 auto;
+
+    @media (max-width: $width-sm){
+      height: 660px;
+    }
 
     &:before{
       content: '';
