@@ -11,6 +11,15 @@
     position: relative;
     z-index: 1;
 
+    @media (min-width: $width-max){
+      width: 110px;
+      height: 110px;
+
+      img{
+        width: 100%;
+      }
+    }
+
     &-pic{
       width: 100%;
 
@@ -31,6 +40,11 @@
     text-align: left;
     text-transform: uppercase;
     margin-left: 15px;
+
+    @media (min-width: $width-max){
+      font-size: 24px;
+      line-height: 30px;
+    }
   }
 
   &__phone{
@@ -41,6 +55,15 @@
     text-align: left;
     margin-left: 28px;
     white-space: nowrap;
+
+    @media (min-width: $width-max){
+      font-size: 24px;
+      line-height: 30px;
+    }
+
+    &:hover{
+      text-decoration: underline;
+    }
 
     @media (max-width: $width-sm){
       display: block;
@@ -74,6 +97,20 @@
       }
     }
   }
+
+  @media (max-width: $width-xs){
+    background-color: rgba(0,0,0,0.4);
+    padding: 5px 0;
+
+    &__logo{
+      width: 54px;
+      height: 54px;
+
+      img{
+        width: 100%;
+      }
+    }
+  }
 }
 
 .s1{
@@ -88,12 +125,21 @@
     letter-spacing: 1.5px;
     text-transform: uppercase;
     margin-bottom: 35px;
+
+    @media (min-width: $width-max){
+      font-size: 48px;
+      line-height: 60px;
+    }
   }
 
   .subheading{
     font-size: 24px;
     font-style: italic;
     letter-spacing: 0.6px;
+
+    @media (min-width: $width-max){
+      font-size: 36px;
+    }
   }
 
   .btn{
@@ -118,7 +164,7 @@
   }
 
   @media (max-width: $width-xs){
-    padding-top: 230px;
+    padding-top: 120px;
   }
 }
 
@@ -152,6 +198,10 @@
       position: relative;
       z-index: 1;
 
+      @media (min-width: $width-max){
+        width: 30%;
+      }
+
       @media (max-width: $width-sm){
         margin: 0 auto 40px auto;
         display: block;
@@ -164,6 +214,10 @@
 
         @media (max-width: $width-sm){
           padding-left: 50px;
+        }
+
+        @media (max-height: 620px){
+          min-height: 100px;
         }
       }
 
@@ -178,6 +232,10 @@
       font-size: 18px;
       font-style: italic;
       margin-bottom: 12px;
+
+      @media (min-width: $width-max){
+        font-size: 20px;
+      }
     }
 
     &__subheading{
@@ -185,6 +243,10 @@
       font-family: Georgia;
       font-size: 12px;
       font-style: italic;
+
+      @media (min-width: $width-max){
+        font-size: 14px;
+      }
     }
 
     .step-id{
@@ -229,6 +291,10 @@
       font-weight: 700;
       text-transform: uppercase;
       margin-bottom: 22px;
+
+      @media (min-width: $width-max){
+        font-size: 16px;
+      }
     }
 
     .variants{
@@ -244,6 +310,10 @@
       &__item{
         cursor: pointer;
         width: 80px;
+
+        @media (min-width: $width-max){
+          width: 140px;
+        }
 
         &.active,
         &:hover{
@@ -265,6 +335,11 @@
         font-size: 0;
         @include transition();
 
+        @media (min-width: $width-max){
+          width: 75px;
+          height: 75px;
+        }
+
         &-pic{
           width: 100%;
           height: 100%;
@@ -279,14 +354,29 @@
         font-size: 11px;
         font-weight: 400;
         text-align: center;
+
+        @media (min-width: $width-max){
+          font-size: 14px;
+        }
       }
 
       &_small{
         @include flex-wrap(wrap);
 
+        .variants__item{
+          &.hidden{
+            display: none;
+          }
+        }
+
         .variants__preview{
           width: 48px;
           height: 48px;
+
+          @media (min-width: $width-max){
+            width: 67px;
+            height: 67px;
+          }
         }
       }
     }
@@ -295,10 +385,15 @@
       display: block;
       margin: 50px auto 0 auto;
       max-width: 100%;
+
+      @media (min-width: $width-max){
+        width: 100%;
+        max-width: 400px;
+      }
     }
 
     &__ctrl{
-      margin-top: 60px;
+      margin-top: 15px;
 
       &-item{
 
@@ -312,6 +407,11 @@
         line-height: 22px;
         text-transform: uppercase;
         text-align: center;
+
+        @media (min-width: $width-max){
+          font-size: 20px;
+          line-height: 28px;
+        }
       }
 
       .next-btn{
@@ -320,6 +420,10 @@
         font-size: 18px;
         font-weight: 700;
         text-transform: uppercase;
+
+        @media (min-width: $width-max){
+          font-size: 20px;
+        }
 
         span{
           width: 54px;
@@ -349,6 +453,14 @@
 
           .next-btn__pic_hover{
             opacity: 1;
+          }
+        }
+
+        &_prev{
+          span{
+            transform: rotateY(180deg);
+            margin-left: 0px;
+            margin-right: 12px;
           }
         }
       }
@@ -394,14 +506,20 @@
       }
     }
 
-    &_1{
-
-    }
-
     &_2{
       .step__item{
         width: 280px;
+
+        @media (min-width: $width-max){
+          width: 30%;
+        }
       }
+      .step__heading{
+        margin-bottom: 0;
+      }
+    }
+
+    &_3{
       .step__heading{
         margin-bottom: 0;
       }
@@ -416,6 +534,11 @@
         line-height: 20px;
         text-transform: uppercase;
         text-align: center;
+
+        @media (min-width: $width-max){
+          font-size: 24px;
+          line-height: 28px;
+        }
       }
 
       .step__heading{
@@ -466,6 +589,11 @@
         z-index: 1;
         margin-bottom: 10px;
         margin-right: 14px;
+
+        @media (min-width: $width-max){
+          font-size: 14px;
+          line-height: 20px;
+        }
 
         @media (max-width: $width-sm){
           font-size: 14px;
@@ -519,6 +647,12 @@
       .pic{
         display: block;
         margin: 0 auto;
+        max-width: 100%;
+        min-height: 100px;
+
+        @media (min-width: $width-max){
+          max-width: 400px;
+        }
       }
     }
 
@@ -538,6 +672,11 @@
         text-transform: uppercase;
         font-size: 11px;
         margin-bottom: 15px;
+
+        @media (min-width: $width-max){
+          font-size: 14px;
+          line-height: 28px;
+        }
 
         &:nth-of-type(3){
           margin-bottom: 0;
@@ -562,6 +701,16 @@
   .item{
     width: 300px;
     margin-bottom: 70px;
+    position: relative;
+    z-index: 1;
+
+    @media (min-width: $width-max){
+      width: 30%;
+    }
+
+    &:hover{
+      z-index: 10;
+    }
 
     @media (min-width: $width-sm){
       @include flex-box();
@@ -576,6 +725,11 @@
       line-height: 20px;
       text-transform: uppercase;
       margin-left: 20px;
+
+      @media (min-width: $width-max){
+        font-size: 20px;
+        line-height: 28px;
+      }
     }
   }
 
@@ -587,7 +741,7 @@
 
     .item{
       text-align: center;
-      width: 100%;
+      margin: 0 auto 25px auto;
     }
   }
 }
@@ -610,6 +764,10 @@
     width: 600px;
     position: relative;
     z-index: 1;
+
+    @media (min-width: $width-max){
+      width: 900px;
+    }
 
     @media (max-width: $width-md){
       margin: 0 auto 0 auto;
@@ -640,6 +798,10 @@
       width: 284px;
       margin-top: 24px;
 
+      @media (min-width: $width-max){
+        width: 428px;
+      }
+
       @media (max-width: $width-md){
         margin: 0 auto 0 auto;
         width: 100%;
@@ -658,6 +820,11 @@
         position: relative;
         z-index: 1;
         cursor: pointer;
+
+        @media (min-width: $width-max){
+          width: 214px;
+          height: 200px;
+        }
 
         @media (max-width: $width-md){
           width: 25%;
@@ -714,6 +881,10 @@
       left: 0px;
       padding: 15px 10px 15px 22px;
 
+      @media (min-width: $width-max){
+        width: 400px;
+      }
+
       .price{
         color: #484142;
         font-family: RobotoCondensed;
@@ -722,9 +893,18 @@
         line-height: 17px;
         text-transform: uppercase;
 
+        @media (min-width: $width-max){
+          font-size: 24px;
+          line-height: 28px;
+        }
+
         &_old{
           color: #bcb6ad;
           font-size: 11px;
+
+          @media (min-width: $width-max){
+            font-size: 18px;
+          }
         }
       }
 
@@ -738,6 +918,10 @@
         text-align: left;
         font-size: 11px;
         font-weight: 400;
+
+        @media (min-width: $width-max){
+          font-size: 14px;
+        }
 
         th{
           width: 50%;
@@ -804,6 +988,16 @@
       right: 20px;
     }
   }
+
+  .form-wrap{
+    max-width: 835px;
+    width: 100%;
+    margin: 0 auto;
+
+    @media (min-width: $width-max){
+      max-width: 1280px;
+    }
+  }
 }
 
 .s5{
@@ -824,6 +1018,10 @@
     width: 100%;
     position: relative;
     z-index: 1;
+
+    @media (min-width: $width-max){
+      max-width: 1000px;
+    }
 
     @media (max-width: $width-md){
       margin: 0 auto;
@@ -1041,6 +1239,11 @@
         text-align: center;
         margin-bottom: 45px;
 
+        @media (min-width: $width-max){
+          font-size: 24px;
+          line-height: 36px;
+        }
+
         @media (max-width: $width-xs){
           br{
             display: none;
@@ -1061,6 +1264,10 @@
       &__list{
         width: 280px;
 
+        @media (min-width: $width-max){
+          width: 400px;
+        }
+
         @media (max-width: $width-sm){
           width: 100%;
         }
@@ -1074,6 +1281,11 @@
           padding-left: 32px;
           position: relative;
           z-index: 1;
+
+          @media (min-width: $width-max){
+            font-size: 16px;
+            line-height: 24px;
+          }
 
           &:before{
             content: '';
@@ -1117,6 +1329,10 @@
     font-style: italic;
     margin-bottom: 22px;
 
+    @media (min-width: $width-max){
+      font-size: 20px;
+    }
+
     @media (max-width: $width-sm){
       margin: 0 auto 40px auto;
       max-width: 360px;
@@ -1131,8 +1347,17 @@
     max-width: 980px;
     width: 100%;
 
+    @media (min-width: $width-max){
+      margin: 0 auto;
+      max-width: 100%;
+    }
+
     .item{
       width: 280px;
+
+      @media (min-width: $width-max){
+        width: 460px;
+      }
 
       @media (max-width: $width-sm){
         margin: 0 auto 40px auto;
@@ -1147,6 +1372,11 @@
       line-height: 21px;
       text-transform: uppercase;
       margin-bottom: 15px;
+
+      @media (min-width: $width-max){
+        font-size: 28px;
+        line-height: 36px;
+      }
     }
 
     .input-block{
@@ -1169,9 +1399,18 @@
         width: 100%;
         margin-bottom: 10px;
 
+        @media (min-width: $width-max){
+          font-size: 14px;
+          line-height: 20px;
+        }
+
         &.all{
           width: 100%;
           font-size: 14px;
+
+          @media (min-width: $width-max){
+            font-size: 20px;
+          }
         }
 
         .checkbox{
@@ -1245,6 +1484,11 @@
     display: block;
     margin: 0 auto 0 auto;
 
+    @media (min-width: $width-max){
+      max-width: 1400px;
+      height: 500px;
+    }
+
     @media (max-width: $width-sm){
       height: 660px;
     }
@@ -1270,6 +1514,10 @@
       padding: 15px 10px 15px 22px;
       z-index: 10;
 
+      @media (min-width: $width-max){
+        width: 400px;
+      }
+
       .head{
         color: #484142;
         font-family: RobotoCondensed;
@@ -1278,6 +1526,11 @@
         line-height: 17px;
         text-transform: uppercase;
         text-align: center;
+
+        @media (min-width: $width-max){
+          font-size: 24px;
+          line-height: 28px;
+        }
       }
 
       .decor{
@@ -1290,6 +1543,10 @@
         text-align: left;
         font-size: 11px;
         font-weight: 400;
+
+        @media (min-width: $width-max){
+          font-size: 14px;
+        }
 
         th{
           width: 35%;
@@ -1306,6 +1563,11 @@
             font-size: 12px;
             font-weight: 700;
             line-height: 19px;
+
+            @media (min-width: $width-max){
+              font-size: 20px;
+              line-height: 28px;
+            }
           }
         }
       }
@@ -1319,5 +1581,15 @@
     width: 100%;
     height: 100%;
     z-index: 1;
+  }
+
+  .form-wrap{
+    max-width: 835px;
+    width: 100%;
+    margin: 0 auto;
+
+    @media (min-width: $width-max){
+      max-width: 1400px;
+    }
   }
 }

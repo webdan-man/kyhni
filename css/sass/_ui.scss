@@ -176,6 +176,13 @@ body{
   opacity: 0;
   pointer-events: none;
   z-index: 30;
+  left: 0;
+
+  @media (min-width: $width-max){
+    max-width: 100%;
+    font-size: 16px;
+    line-height: 24px;
+  }
 
   &:before{
     content: attr(data-text);

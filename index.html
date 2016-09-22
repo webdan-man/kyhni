@@ -1,27 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>Производство кухонь из массива натурального дерева</title>
+    <meta name="description" content="Изготовление кухонь из массива натурального дерева сосны, ясеня, дуба, бука по индивидуальным проектам. Доставка и сборка по Москве и области.">
+    <meta name="keywords" content="кухни из массива, кухни из дерева, деревянные кухни, кухонная мебель, мебель для кухни, кухни на заказ, угловые кухни, кухонный гарнитур, кухонные шкафы, мебель для маленькой кухни, изготовление кухонной мебели, хорошая кухня, белая кухня, кухня из массива от производителя, кухни классика массив">
 
-    <!-- build:css css/combined.css -->
-	    <!-- bower:css -->
-	    <link rel="stylesheet" href="bower-components/slick-carousel/slick/slick.css" />
-	    <link rel="stylesheet" href="bower-components/bxslider-4/dist/jquery.bxslider.css" />
-	    <!-- endbower -->
-    <!-- endbuild -->
-
-    <!-- build:css css/main.css -->
-    	<link rel="stylesheet" href="css/style.css"/>
-    <!-- endbuild -->
+    <style>
+        body{
+            opacity: 0;
+        }
+    </style>
 
     <link rel="shortcut icon" href="favicon.png" type="image/png">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, maximum-scale=1.0"/>
 </head>
 <body>
 
 <div class="wrapper-all">
-
     <div class="description-block"></div>
 
     <!-- MENU -->
@@ -66,15 +62,15 @@
                 </div>
 
                 <div class="header__contacts">
-                    <span class="header__phone header__phone_whatsapp">+7 994 242 23 12</span>
-                    <span class="header__phone">8 495 223 55 11</span>
+                    <a href="tel:+7 994 242 23 12" class="header__phone header__phone_whatsapp">+7 994 242 23 12</a>
+                    <a href="tel:8 495 223 55 11" class="header__phone">8 495 223 55 11</a>
                 </div>
             </div>
         </div>
     </header>
 
     <!-- SECTION 1 -->
-    <section class="s1">
+    <section class="s1 anchor1">
         <div class="wrapper">
             <div class="container">
                 <h2 class="heading">
@@ -86,12 +82,12 @@
                     Для тех кто ценит экологичность, чистоту и уют
                 </p>
 
-                <button class="btn btn_first-screen">
+                <button class="btn btn_first-screen" data-scroll-btn="">
                     Узнать<br>
                     стоимость
                 </button>
 
-                <button class="btn btn_scroll hidden-sm">
+                <button class="btn btn_scroll hidden-sm" data-scroll-btn="">
                     <img src="img/section1/scroll-white.png" alt="pic" class="btn_scroll__pic">
                     <img src="img/section1/scroll.png" alt="pic" class="btn_scroll__pic btn_scroll__pic_hover">
                 </button>
@@ -102,7 +98,7 @@
     </section>
 
     <!-- SECTION 2 -->
-    <section class="s2" data-block-color="white-block">
+    <section class="s2 anchor2" data-block-color="white-block">
         <div class="wrapper">
             <div class="container">
                 <h2 class="title">
@@ -151,7 +147,7 @@
                             </p>
 
                             <div class="variants">
-                                <div class="variants__item" data-description="
+                                <div class="variants__item" data-species="sosna" data-description="
                                     Древесина сосны легко обрабатывается, не растрескивается. Имеет красивый цвет и чётко выраженную текстуру
                                 ">
 
@@ -162,7 +158,7 @@
                                         Сосна
                                     </p>
                                 </div>
-                                <div class="variants__item" data-description="
+                                <div class="variants__item" data-species="buk" data-description="
                                     Твердая и плотная древесина бука обладает прочностью, долговечностью и эстетичным внешним видом
                                 ">
 
@@ -173,7 +169,7 @@
                                         Бук
                                     </p>
                                 </div>
-                                <div class="variants__item" data-description="
+                                <div class="variants__item" data-species="jasen" data-description="
                                     Ясень не уступает дубу по прочности и твёрдости, богатству текстуры. Превосходит дуб по стойкости к деформациям
                                 ">
 
@@ -184,7 +180,7 @@
                                         Ясень
                                     </p>
                                 </div>
-                                <div class="variants__item" data-description="
+                                <div class="variants__item" data-species="dub" data-description="
                                     Древесина дуба очень прочная, хорошо гнётся. Имеет красивую крупную текстуру. Легко окрашивается
                                 ">
 
@@ -199,7 +195,7 @@
                         </div>
 
                         <div class="step__item hidden-sm">
-                            <img src="img/section2/doors.png" alt="pic" class="result">
+                            <img src="img/section2/doors.png" alt="pic" data-result-pic="" class="result">
                         </div>
 
                         <div class="step__item">
@@ -216,7 +212,7 @@
                             </p>
 
                             <div class="variants variants_small">
-                                <div class="variants__item" data-description="">
+                                <div class="variants__item disabled" data-application="lac" data-description="">
 
                                     <div class="variants__preview">
                                         <img src="img/section2/lacquer/lack-1.jpg" alt="pic" class="variants__preview-pic">
@@ -225,7 +221,7 @@
                                         Лак
                                     </p>
                                 </div>
-                                <div class="variants__item" data-description="">
+                                <div class="variants__item disabled" data-application="ton" data-description="">
 
                                     <div class="variants__preview">
                                         <img src="img/section2/lacquer/tone-2.jpg" alt="pic" class="variants__preview-pic">
@@ -234,7 +230,7 @@
                                         Тонирование
                                     </p>
                                 </div>
-                                <div class="variants__item" data-description="">
+                                <div class="variants__item disabled" data-application="ton_pat" data-description="">
 
                                     <div class="variants__preview">
                                         <img src="img/section2/lacquer/tone-pat-2.jpg" alt="pic" class="variants__preview-pic">
@@ -244,7 +240,7 @@
                                         с патиной
                                     </p>
                                 </div>
-                                <div class="variants__item" data-description="">
+                                <div class="variants__item disabled" data-application="emal" data-description="">
 
                                     <div class="variants__preview">
                                         <img src="img/section2/lacquer/emal-1.jpg" alt="pic" class="variants__preview-pic">
@@ -253,7 +249,7 @@
                                         Эмаль
                                     </p>
                                 </div>
-                                <div class="variants__item" data-description="">
+                                <div class="variants__item disabled" data-application="emal_pat" data-description="">
 
                                     <div class="variants__preview">
                                         <img src="img/section2/lacquer/emal-pat-1.jpg" alt="pic" class="variants__preview-pic">
@@ -263,7 +259,7 @@
                                         патиной
                                     </p>
                                 </div>
-                                <div class="variants__item" data-description="">
+                                <div class="variants__item disabled" data-application="bash" data-description="">
 
                                     <div class="variants__preview">
                                         <img src="img/section2/lacquer/bash-1.jpg" alt="pic" class="variants__preview-pic">
@@ -315,15 +311,11 @@
                                 <img src="img/section2/forms/1.png" alt="pic" class="pic">
 
                                 <div class="flex_around-min btn-wrap">
-                                    <label class="kitchen-form__btn">
-                                        мойка Левая
-                                    </label>
-                                    <label class="kitchen-form__btn">
-                                        Мойка Правая
-                                    </label>
+                                    <label class="kitchen-form__btn" data-kitchen-form="1" data-kitchen-form-type="Прямая, мойка Левая">мойка Левая</label>
+                                    <label class="kitchen-form__btn" data-kitchen-form="1" data-kitchen-form-type="Прямая, мойка Правая">Мойка Правая</label>
                                 </div>
 
-                                <label class="kitchen-form__btn kitchen-form__btn_big">Прямая</label>
+                                <label class="kitchen-form__btn kitchen-form__btn_big" data-kitchen-form="1" data-kitchen-form-type="Прямая">Прямая</label>
                             </div>
                         </div>
 
@@ -336,15 +328,11 @@
                                 <img src="img/section2/forms/2.png" alt="pic" class="pic">
 
                                 <div class="flex_around-min btn-wrap">
-                                    <label class="kitchen-form__btn">
-                                        мойка Левая
-                                    </label>
-                                    <label class="kitchen-form__btn">
-                                        Мойка Правая
-                                    </label>
+                                    <label class="kitchen-form__btn" data-kitchen-form="2" data-kitchen-form-type="П-образная, мойка Левая">мойка Левая</label>
+                                    <label class="kitchen-form__btn" data-kitchen-form="2" data-kitchen-form-type="П-образная, мойка Правая">Мойка Правая</label>
                                 </div>
 
-                                <label class="kitchen-form__btn kitchen-form__btn_big">Прямая</label>
+                                <label class="kitchen-form__btn kitchen-form__btn_big" data-kitchen-form="2" data-kitchen-form-type="П-образная">П-образная</label>
                             </div>
                         </div>
 
@@ -360,15 +348,11 @@
                                 <img src="img/section2/forms/3.png" alt="pic" class="pic">
 
                                 <div class="flex_around-min btn-wrap">
-                                    <label class="kitchen-form__btn">
-                                        мойка Левая
-                                    </label>
-                                    <label class="kitchen-form__btn">
-                                        Мойка Правая
-                                    </label>
+                                    <label class="kitchen-form__btn" data-kitchen-form="3" data-kitchen-form-type="Угловая, мойка Левая">мойка Левая</label>
+                                    <label class="kitchen-form__btn" data-kitchen-form="3" data-kitchen-form-type="Угловая, мойка Правая">Мойка Правая</label>
                                 </div>
 
-                                <label class="kitchen-form__btn kitchen-form__btn_big">Прямая</label>
+                                <label class="kitchen-form__btn kitchen-form__btn_big" data-kitchen-form="3" data-kitchen-form-type="Угловая">Угловая</label>
                             </div>
                         </div>
                     </div>
@@ -381,6 +365,13 @@
                                     <img src="img/arrow.png" alt="pic" class="next-btn__pic">
                                     <img src="img/arrow-h.png" alt="pic" class="next-btn__pic next-btn__pic_hover">
                                 </span>
+                            </button>
+                            <button class="next-btn next-btn_prev" data-step-prev="1">
+                                <span>
+                                    <img src="img/arrow.png" alt="pic" class="next-btn__pic">
+                                    <img src="img/arrow-h.png" alt="pic" class="next-btn__pic next-btn__pic_hover">
+                                </span>
+                                Назад
                             </button>
                         </div>
                         <div class="step__item">
@@ -415,22 +406,22 @@
 
                                 <div class="input-block">
                                     <label>
-                                        <input type="radio" name="tabletop">
+                                        <input type="radio" value="ДСП" name="tabletop" data-optional="tabletop">
                                         <span class="checkbox"></span>
                                         ДСП
                                     </label>
                                     <label>
-                                        <input type="radio" name="tabletop">
+                                        <input type="radio" value="Искусственный камень" name="tabletop" data-optional="tabletop">
                                         <span class="checkbox"></span>
                                         Искусственный камень
                                     </label>
                                     <label>
-                                        <input type="radio" name="tabletop">
+                                        <input type="radio" value="Кварц" name="tabletop" data-optional="tabletop">
                                         <span class="checkbox"></span>
                                         Кварц
                                     </label>
                                     <label>
-                                        <input type="radio" name="tabletop">
+                                        <input type="radio" value="Натуральный камень" name="tabletop" data-optional="tabletop">
                                         <span class="checkbox"></span>
                                         Натуральный камень
                                     </label>
@@ -452,22 +443,22 @@
 
                                 <div class="input-block">
                                     <label>
-                                        <input type="checkbox" name="">
+                                        <input type="checkbox" value="Фильтр для воды" name="" data-optional="equipment">
                                         <span class="checkbox"></span>
                                         Фильтр для воды
                                     </label>
                                     <label>
-                                        <input type="checkbox" name="">
+                                        <input type="checkbox" value="Измельчитель отходов" name="" data-optional="equipment">
                                         <span class="checkbox"></span>
                                         Измельчитель отходов
                                     </label>
                                     <label>
-                                        <input type="checkbox" name="">
+                                        <input type="checkbox" value="Сенсорное освещение" name="" data-optional="equipment">
                                         <span class="checkbox"></span>
                                         Сенсорное освещение
                                     </label>
                                     <label>
-                                        <input type="checkbox" name="">
+                                        <input type="checkbox" value="Дизайнерский фартук" name="" data-optional="equipment">
                                         <span class="checkbox"></span>
                                         Дизайнерский фартук
                                     </label>
@@ -492,22 +483,22 @@
 
                                 <div class="input-block">
                                     <label>
-                                        <input type="checkbox" name="">
+                                        <input type="checkbox" value="Плавное закрывание" name="" data-optional="apps">
                                         <span class="checkbox"></span>
                                         Плавное закрывание
                                     </label>
                                     <label>
-                                        <input type="checkbox" name="">
+                                        <input type="checkbox" value="Барная стойка" name="" data-optional="apps">
                                         <span class="checkbox"></span>
                                         Барная стойка
                                     </label>
                                     <label>
-                                        <input type="checkbox" name="">
+                                        <input type="checkbox" value="Хранение крышек" name="" data-optional="apps">
                                         <span class="checkbox"></span>
                                         Хранение крышек
                                     </label>
                                     <label>
-                                        <input type="checkbox" name="">
+                                        <input type="checkbox" value="Ручки сваровски" name="" data-optional="apps">
                                         <span class="checkbox"></span>
                                         Ручки сваровски
                                     </label>
@@ -518,12 +509,19 @@
 
                     <div class="step__ctrl flex_between-sm_top">
                         <div class="step__item">
-                            <button class="next-btn" data-step="4">
+                            <button class="next-btn" data-result-btn="" data-step="4">
                                 Далее
                                 <span>
                                     <img src="img/arrow.png" alt="pic" class="next-btn__pic">
                                     <img src="img/arrow-h.png" alt="pic" class="next-btn__pic next-btn__pic_hover">
                                 </span>
+                            </button>
+                            <button class="next-btn next-btn_prev" data-step-prev="2">
+                                <span>
+                                    <img src="img/arrow.png" alt="pic" class="next-btn__pic">
+                                    <img src="img/arrow-h.png" alt="pic" class="next-btn__pic next-btn__pic_hover">
+                                </span>
+                                Назад
                             </button>
                         </div>
                         <div class="step__item">
@@ -550,9 +548,9 @@
                             </div>
 
                             <div class="kitchen-result">
-                                <h3 class="heading">Ясень</h3>
+                                <h3 class="heading" data-output="species"></h3>
 
-                                <img src="img/section2/doors-test.png" alt="pic" class="pic">
+                                <img src="img/section2/doors-test.png" data-result-pic="" alt="pic" class="pic">
                             </div>
                         </div>
 
@@ -562,54 +560,63 @@
                             </div>
 
                             <div class="kitchen-result">
-                                <h3 class="heading">П-образная</h3>
+                                <h3 class="heading" data-output="form-type"></h3>
 
-                                <img src="img/section2/forms/2.png" alt="pic" class="pic">
+                                <img src="" data-output="form" alt="pic" class="pic">
                             </div>
                         </div>
 
                         <div class="step__item">
-                            <div class="step__item-head hidden-sm">
-                                <div class="step-id">
+                            <div class="step__item-head">
+                                <div class="step-id hidden-sm">
                                     <span class="active-step">04</span>
                                     <span>04</span>
                                 </div>
                             </div>
-
+                            <h3 class="heading visible-no">hidden</h3>
                             <div class="kitchen-total">
                                 <h3 class="heading">Столешница</h3>
-                                <p class="text">
-                                    Искусственный камень
+                                <p class="text" data-output="tabletop">
+
                                 </p>
-                                <h3 class="heading">Ооборудование</h3>
-                                <p class="text">
-                                    Фильтр для воды, Дизайнерский фартук
+                                <h3 class="heading">Оборудование</h3>
+                                <p class="text" data-output="equipment">
+
                                 </p>
                                 <h3 class="heading">Дополнения</h3>
-                                <p class="text">
-                                    Хранение крышек, Ручки сваровски
+                                <p class="text" data-output="apps">
+
                                 </p>
                             </div>
                         </div>
                     </div>
 
-                    <div class="step__ctrl">
-                        <form action="ajax/mail.php" method="post" name="" class="form_round">
-                            <input type="text" class="input" name="" data-required="" placeholder="Имя">
-                            <input type="text" class="input" name="" data-required="" placeholder="Телефон">
+                    <div class="step__ctrl flex_start-sm">
+                        <form action="ajax/mail.php" method="post" name="Конструктор кухни" data-form-name="constructor" class="form_round">
+                            <input type="text" class="input" name="name" data-required="" placeholder="Имя">
+                            <input type="text" class="input" name="phone" data-required="" placeholder="Телефон">
+                            <input type="hidden" name="material">
+                            <input type="hidden" name="application">
+                            <input type="hidden" name="optional">
+                            <input type="hidden" name="kitchen-form">
                             <input type="hidden" name="frm-name">
                             <button class="btn">отправить</button>
                         </form>
+                        <button class="next-btn next-btn_prev" data-step-prev="1">
+                                <span>
+                                    <img src="img/arrow.png" alt="pic" class="next-btn__pic">
+                                    <img src="img/arrow-h.png" alt="pic" class="next-btn__pic next-btn__pic_hover">
+                                </span>
+                            Назад
+                        </button>
                     </div>
                 </div>
-
-
             </div>
         </div>
     </section>
 
     <!-- SECTION 3 -->
-    <section class="s3">
+    <section class="s3 anchor3">
         <div class="wrapper">
             <div class="container">
                 <h2 class="title">
@@ -689,7 +696,7 @@
     </section>
 
     <!-- SECTION 4 -->
-    <section class="s4" data-block-color="white-block">
+    <section class="s4 anchor4" data-block-color="white-block">
         <div class="wrapper">
             <div class="container">
                 <h2 class="title">
@@ -812,20 +819,22 @@
                     </div>
                 </div>
 
-                <p class="s4__title">Заполните форму и успейте забронировать кухню!</p>
+                <div class="form-wrap">
+                    <p class="s4__title">Заполните форму и успейте забронировать кухню!</p>
 
-                <form action="ajax/mail.php" method="post" name="" class="form_round">
-                    <input type="text" class="input" name="" data-required="" placeholder="Имя">
-                    <input type="text" class="input" name="" data-required="" placeholder="Телефон">
-                    <input type="hidden" name="frm-name">
-                    <button class="btn">Узнать стоимость</button>
-                </form>
+                    <form action="ajax/mail.php" method="post" name="Ликвидационная распродажа" class="form_round">
+                        <input type="text" class="input" name="name" data-required="" placeholder="Имя">
+                        <input type="text" class="input" name="phone" data-required="" placeholder="Телефон">
+                        <input type="hidden" name="frm-name">
+                        <button class="btn">Узнать стоимость</button>
+                    </form>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- SECTION 5 -->
-    <section class="s5" data-block-color="white-block">
+    <section class="s5 anchor5" data-block-color="white-block">
         <div class="wrapper">
             <div class="container">
                 <h2 class="title">
@@ -956,7 +965,7 @@
     </section>
 
     <!-- SECTION 6 -->
-    <section class="s6">
+    <section class="s6 anchor6">
         <div class="wrapper">
             <div class="container">
                 <h2 class="title">
@@ -969,7 +978,7 @@
                     сориентирует вас по цене в течении 25 минут
                 </p>
 
-                <form action="" class="form">
+                <form action="ajax/mail.php" method="post" name="Узнайте ориентировочную стоимость Вашей кухни" data-form-name="estimate-coast" class="form">
                     <div class="flex_between-sm_top">
                         <div class="item">
                             <h3 class="head">
@@ -979,47 +988,47 @@
 
                             <div class="input-block input-block_checkbox">
                                 <label class="all" data-select-all="">
-                                    <input type="checkbox" class="checkbox-all" name="">
+                                    <input type="checkbox" class="checkbox-all" name="all" value="Все изделия">
                                     <span class="checkbox"></span>
                                     Хочу ВСЕ!
                                 </label>
                                 <label>
-                                    <input type="checkbox" name="">
+                                    <input type="checkbox" name="product-item" value="Варочная панель">
                                     <span class="checkbox"></span>
                                     Варочная панель
                                 </label>
                                 <label>
-                                    <input type="checkbox" name="">
+                                    <input type="checkbox" name="product-item" value="Винный шкаф">
                                     <span class="checkbox"></span>
                                     Винный шкаф
                                 </label>
                                 <label>
-                                    <input type="checkbox" name="">
+                                    <input type="checkbox" name="product-item" value="Духовой шкаф">
                                     <span class="checkbox"></span>
                                     Духовой шкаф
                                 </label>
                                 <label>
-                                    <input type="checkbox" name="">
+                                    <input type="checkbox" name="product-item" value="Холодильник">
                                     <span class="checkbox"></span>
                                     Холодильник
                                 </label>
                                 <label>
-                                    <input type="checkbox" name="">
+                                    <input type="checkbox" name="product-item" value="Вытяжка">
                                     <span class="checkbox"></span>
                                     Вытяжка
                                 </label>
                                 <label>
-                                    <input type="checkbox" name="">
+                                    <input type="checkbox" name="product-item" value="Измельчитель отходов">
                                     <span class="checkbox"></span>
                                     Измельчитель отходов
                                 </label>
                                 <label>
-                                    <input type="checkbox" name="">
+                                    <input type="checkbox" name="product-item" value="Посудомойка">
                                     <span class="checkbox"></span>
                                     Посудомойка
                                 </label>
                                 <label>
-                                    <input type="checkbox" name="">
+                                    <input type="checkbox" name="product-item" value="Фильтр для воды">
                                     <span class="checkbox"></span>
                                     Фильтр для воды
                                 </label>
@@ -1034,18 +1043,18 @@
 
                             <div class="input-block">
                                 <label>
-                                    <input type="radio" name="step">
+                                    <input type="radio" name="stage-item" value="Голые стены">
                                     <span class="checkbox"></span>
                                     Голые стены
                                 </label>
                                 <label>
-                                    <input type="radio" name="step">
+                                    <input type="radio" name="stage-item" value="Выведено электричество и вода">
                                     <span class="checkbox"></span>
                                     Выведено электричество
                                     и вода
                                 </label>
                                 <label>
-                                    <input type="radio" name="step">
+                                    <input type="radio" name="stage-item" value="Помещение готово">
                                     <span class="checkbox"></span>
                                     Помещение готово
                                 </label>
@@ -1054,28 +1063,28 @@
 
                         <div class="item">
                             <h3 class="head">
-                                Какая у Вас стадия<br>
-                                ремонта?
+                                Выберите породу<br>
+                                дерева
                             </h3>
 
                             <div class="input-block input-block_checkbox">
                                 <label>
-                                    <input type="radio" name="step">
+                                    <input type="radio" name="tree-item" value="Сосна">
                                     <span class="checkbox"></span>
                                     Сосна
                                 </label>
                                 <label>
-                                    <input type="radio" name="step">
+                                    <input type="radio" name="tree-item" value="Ясень">
                                     <span class="checkbox"></span>
                                     Ясень
                                 </label>
                                 <label>
-                                    <input type="radio" name="step">
+                                    <input type="radio" name="tree-item" value="Дуб">
                                     <span class="checkbox"></span>
                                     Дуб
                                 </label>
                                 <label>
-                                    <input type="radio" name="step">
+                                    <input type="radio" name="tree-item" value="Бук">
                                     <span class="checkbox"></span>
                                     Бук
                                 </label>
@@ -1084,9 +1093,12 @@
                     </div>
 
                     <div class="form_round">
-                        <input type="text" class="input" name="" data-required="" placeholder="Имя">
-                        <input type="text" class="input" name="" data-required="" placeholder="Телефон">
+                        <input type="text" class="input" name="name" data-required="" placeholder="Имя">
+                        <input type="text" class="input" name="phone" data-required="" placeholder="Телефон">
                         <input type="hidden" name="frm-name">
+                        <input type="hidden" name="optional">
+                        <input type="hidden" name="stage">
+                        <input type="hidden" name="material">
                         <button class="btn">отправить</button>
                     </div>
                 </form>
@@ -1095,7 +1107,7 @@
     </section>
 
     <!-- SECTION 7 -->
-    <section class="s7" data-block-color="white-block">
+    <section class="s7 anchor7" data-block-color="white-block">
         <div class="wrapper">
             <div class="container">
                 <h2 class="title">
@@ -1110,7 +1122,7 @@
                         <table class="table">
                             <tr>
                                 <th>Адрес</th>
-                                <td>Москва, пр-т Ленина, 45</td>
+                                <td>Московская обл., г. Истра, ул. Маяковского, д. 15</td>
                             </tr>
                             <tr>
                                 <th>E-mail</th>
@@ -1119,8 +1131,7 @@
                             <tr>
                                 <th>Телефоны</th>
                                 <td>
-                                    <a href="">+7 994 242 23 12</a>
-                                    <a href="">8 495 223 55 11</a>
+                                    <a href="">8-499-404-24-25</a>
                                 </td>
                             </tr>
                         </table>
@@ -1130,45 +1141,62 @@
                     </div>
                 </div>
 
-                <p class="s4__title">Остались вопросы? Пишите:</p>
+                <div class="form-wrap">
+                    <p class="s4__title">Остались вопросы? Пишите:</p>
 
-                <form action="ajax/mail.php" method="post" name="" class="form_round">
-                    <input type="text" class="input" name="" data-required="" placeholder="Имя">
-                    <input type="text" class="input" name="" data-required="" placeholder="Телефон">
-                    <input type="hidden" name="frm-name">
-                    <button class="btn">отправить</button>
-                </form>
+                    <form action="ajax/mail.php" method="post" name="Остались вопросы?" class="form_round">
+                        <input type="text" class="input" name="name" data-required="" placeholder="Имя">
+                        <input type="text" class="input" name="phone" data-required="" placeholder="Телефон">
+                        <input type="hidden" name="frm-name">
+                        <button class="btn">отправить</button>
+                    </form>
+                </div>
             </div>
             <p class="copyright show-xs">Copyright 2016 · All rights reserved.</p>
         </div>
     </section>
 
     <!-- MODAL WINDOW -->
-    <div class="modal hidden">
-        <div class="layout" data-btn-type="close">
+    <!--<div class="modal hidden">-->
+        <!--<div class="layout" data-btn-type="close">-->
 
+        <!--</div>-->
+
+        <!--<div class="callback hidden">-->
+            <!--<div class="colse" data-btn-type="close"></div>-->
+
+            <!--<form action="ajax/mail.php" method="post" name="">-->
+
+                <!--<h3 class="heading"></h3>-->
+
+                <!--<button class="btn"></button>-->
+            <!--</form>-->
+        <!--</div>-->
+    <!--</div>-->
+
+    <div class="modal">
+        <div class="box-modal" id="error-pop">
+            <div class="box-modal_close arcticmodal-close"><img src="img/modal/close.png" alt="pic"></div>
+            Пожалуйста введите данные.
         </div>
-
-        <div class="callback hidden">
-            <div class="colse" data-btn-type="close"></div>
-
-            <form action="ajax/mail.php" method="post" name="">
-
-                <h3 class="heading"></h3>
-
-                <button class="btn"></button>
-            </form>
+        <div class="box-modal" id="success-pop">
+            <div class="box-modal_close arcticmodal-close"><img src="img/modal/close.png" alt="pic"></div>
+            <h2 class="heading">Заявка принята</h2>
+            <p class="text">
+                Мы свяжемся с вами<br>
+                в ближайшее время
+            </p>
         </div>
     </div>
 </div>
 
-<!--------------------------------------------- SCRIPT ---------------------------------------------------------------->
+<!-- SCRIPT -->
 <!-- build:js js/vender.js -->
 	<!-- bower:js -->
 	<script src="bower-components/jquery/dist/jquery.js"></script>
 	<script src="bower-components/slick-carousel/slick/slick.js"></script>
+	<script src="bower-components/arcticmodalbw/arcticmodal/jquery.arcticmodal.min.js"></script>
 	<script src="bower-components/jquery.inputmask/dist/inputmask/inputmask.js"></script>
-	<script src="bower-components/bxslider-4/dist/jquery.bxslider.js"></script>
 	<!-- endbower -->
 <!-- endbuild -->
 <!-- build:js js/main.js -->
@@ -1178,7 +1206,7 @@
 <script>
     function initMap() {
         var style = [{"featureType":"administrative","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"visibility":"on"}]},{"featureType":"administrative","elementType":"labels","stylers":[{"visibility":"on"},{"color":"#716464"},{"weight":"0.01"}]},{"featureType":"administrative.country","elementType":"labels","stylers":[{"visibility":"on"}]},{"featureType":"landscape","elementType":"all","stylers":[{"visibility":"simplified"}]},{"featureType":"landscape.natural","elementType":"geometry","stylers":[{"visibility":"simplified"}]},{"featureType":"landscape.natural.landcover","elementType":"geometry","stylers":[{"visibility":"simplified"}]},{"featureType":"poi","elementType":"all","stylers":[{"visibility":"simplified"}]},{"featureType":"poi","elementType":"geometry.fill","stylers":[{"visibility":"simplified"}]},{"featureType":"poi","elementType":"geometry.stroke","stylers":[{"visibility":"simplified"}]},{"featureType":"poi","elementType":"labels.text","stylers":[{"visibility":"simplified"}]},{"featureType":"poi","elementType":"labels.text.fill","stylers":[{"visibility":"simplified"}]},{"featureType":"poi","elementType":"labels.text.stroke","stylers":[{"visibility":"simplified"}]},{"featureType":"poi.attraction","elementType":"geometry","stylers":[{"visibility":"on"}]},{"featureType":"road","elementType":"all","stylers":[{"visibility":"on"}]},{"featureType":"road.highway","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"road.highway","elementType":"geometry","stylers":[{"visibility":"on"}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"visibility":"on"}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"visibility":"simplified"},{"color":"#a05519"},{"saturation":"-13"}]},{"featureType":"road.local","elementType":"all","stylers":[{"visibility":"on"}]},{"featureType":"transit","elementType":"all","stylers":[{"visibility":"simplified"}]},{"featureType":"transit","elementType":"geometry","stylers":[{"visibility":"simplified"}]},{"featureType":"transit.station","elementType":"geometry","stylers":[{"visibility":"on"}]},{"featureType":"water","elementType":"all","stylers":[{"visibility":"simplified"},{"color":"#84afa3"},{"lightness":52}]},{"featureType":"water","elementType":"geometry","stylers":[{"visibility":"on"}]},{"featureType":"water","elementType":"geometry.fill","stylers":[{"visibility":"on"}]}];
-        var position = {lat: -34.397, lng: 150.644};
+        var position = {lat: 55.923329, lng: 36.868007};
         var map = new google.maps.Map(document.getElementById('map'), {
             center: position,
             scrollwheel: false,
@@ -1195,3 +1223,14 @@
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBaFSdDyj8df9V1LSLPS4KyV7bzc7RVh6k&callback=initMap" async defer></script>
 </body>
 </html>
+
+<!-- build:css css/combined.css -->
+<!-- bower:css -->
+<link rel="stylesheet" href="bower-components/slick-carousel/slick/slick.css" />
+<link rel="stylesheet" href="bower-components/arcticmodalbw/arcticmodal/jquery.arcticmodal.css" />
+<!-- endbower -->
+<!-- endbuild -->
+
+<!-- build:css css/main.css -->
+<link rel="stylesheet" href="css/style.css"/>
+<!-- endbuild -->
